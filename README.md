@@ -1,60 +1,37 @@
-# CodeIgniter 4 Framework
+# Integração com ERP RM TOTVS - Ferramentas Fiscais
 
-## What is CodeIgniter?
+Este repositório é destinado ao desenvolvimento de uma aplicação web integrada ao ERP RM da [TOTVS](https://www.totvs.com/), com foco em fornecer ferramentas complementares e auxiliares para rotinas fiscais. A aplicação interage diretamente com os módulos:
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+- **RM Gestão de Estoque**  
+- **RM Fiscal**
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## Objetivo
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+O objetivo principal deste projeto é simplificar e automatizar processos relacionados a obrigações fiscais, otimizando as operações realizadas nos módulos mencionados e oferecendo soluções customizadas que atendam às necessidades específicas das empresas.
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+## Funcionalidades
 
-## Important Change with index.php
+- Integração com os módulos RM Gestão de Estoque e RM Fiscal.
+- Ferramentas para geração e validação de documentos fiscais.
+- Relatórios personalizados e análises de dados fiscais.
+- Automação de rotinas repetitivas, garantindo maior produtividade e precisão.
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+## Termos de Uso
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+Este repositório é **proprietário** e não está licenciado para uso, modificação, distribuição ou redistribuição, seja total ou parcial. Todas as permissões relacionadas ao uso deste software são exclusivamente reservadas ao autor.
 
-**Please** read the user guide for a better explanation of how CI4 works!
+### Restrições
 
-## Repository Management
+1. **Proibição de cópia ou distribuição**: Não é permitido copiar, redistribuir, ou compartilhar este código ou partes dele.
+2. **Sem contribuições externas**: Pull requests, sugestões ou qualquer forma de contribuição externa não serão aceitas.
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+Se você tiver dúvidas ou precisa de mais informações sobre este projeto, entre em contato diretamente.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+## Licença
 
-## Contributing
+Este software é **proprietário** e todos os direitos são reservados ao autor.
 
-We welcome contributions from the community.
+---
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
-
-## Server Requirements
-
-PHP version 8.1 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+**Autor:** Thales Henrique 
+**Contato:** thaleshpied@gmail.com
