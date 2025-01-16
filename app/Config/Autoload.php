@@ -8,7 +8,6 @@ use CodeIgniter\Config\AutoloadConfig;
  * -------------------------------------------------------------------
  * AUTOLOADER CONFIGURATION
  * -------------------------------------------------------------------
- *
  * This file defines the namespaces and class maps so the Autoloader
  * can find the files as needed.
  *
@@ -30,17 +29,24 @@ class Autoload extends AutoloadConfig
      * their location on the file system. These are used by the autoloader
      * to locate files the first time they have been instantiated.
      *
-     * The 'Config' (APPPATH . 'Config') and 'CodeIgniter' (SYSTEMPATH) are
-     * already mapped for you.
-     *
-     * You may change the name of the 'App' namespace if you wish,
+     * The '/app' and '/system' directories are already mapped for you.
+     * you may change the name of the 'App' namespace if you wish,
      * but this should be done prior to creating any namespaced classes,
      * else you will need to modify all of those classes for this to work.
+     *
+     * Prototype:
+     *   $psr4 = [
+     *       'CodeIgniter' => SYSTEMPATH,
+     *       'App'         => APPPATH
+     *   ];
      *
      * @var array<string, list<string>|string>
      */
     public $psr4 = [
-        APP_NAMESPACE => APPPATH,
+        APP_NAMESPACE => APPPATH, // For custom app namespace
+        'Config'      => APPPATH . 'Config',
+        'Custom'      => APPPATH . 'Custom', // Exemplo de namespace personalizado
+        'App\Models' => APPPATH . 'Models',
     ];
 
     /**
@@ -60,7 +66,10 @@ class Autoload extends AutoloadConfig
      *
      * @var array<string, string>
      */
-    public $classmap = [];
+    public $classmap = [
+        // Adicione aqui mapeamentos de classes personalizadas se necessário
+        // 'MyLibrary' => APPPATH . 'Libraries/MyLibrary.php',
+    ];
 
     /**
      * -------------------------------------------------------------------
@@ -77,7 +86,10 @@ class Autoload extends AutoloadConfig
      *
      * @var list<string>
      */
-    public $files = [];
+    public $files = [
+        // Adicione caminhos de arquivos para serem carregados automaticamente
+        // APPPATH . 'Helpers/custom_helper.php',
+    ];
 
     /**
      * -------------------------------------------------------------------
@@ -90,5 +102,9 @@ class Autoload extends AutoloadConfig
      *
      * @var list<string>
      */
-    public $helpers = [];
+    public $helpers = [
+        'form', // Carrega o helper de formulários
+        'url',  // Carrega o helper de URLs
+        // Adicione outros helpers necessários
+    ];
 }

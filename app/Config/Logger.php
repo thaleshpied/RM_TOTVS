@@ -36,10 +36,27 @@ class Logger extends BaseConfig
      * For a live site you'll usually enable Critical or higher (3) to be logged otherwise
      * your log files will fill up very fast.
      *
-     * @var int|list<int>
+     * @var array|int
      */
-    public $threshold = (ENVIRONMENT === 'production') ? 4 : 9;
+    // public $threshold = (ENVIRONMENT === 'production') ? 4 : 9;
 
+    // public $logThreshold = LOG_DEBUG;
+
+    // ABAIXO DESABILITANDO LOGS 
+    // public $threshold = 0; 
+    // public $logThreshold = 0; 
+
+    // abaixo todos logs ativos
+
+    public $threshold = [
+        'critical' => 1,
+        'error' => 2,
+        'debug' => 3,
+    ];
+    public $logThreshold = LOG_DEBUG;
+
+
+    
     /**
      * --------------------------------------------------------------------------
      * Date Format for Logs
@@ -72,8 +89,6 @@ class Logger extends BaseConfig
      *
      * Handlers are executed in the order defined in this array, starting with
      * the handler on top and continuing down.
-     *
-     * @var array<class-string, array<string, int|list<string>|string>>
      */
     public array $handlers = [
         /*

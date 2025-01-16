@@ -1,0 +1,36 @@
+{
+  "name": "SIS Andaimes MF",
+  "short_name": "SAMF",
+  "description": "Gestão de Andaimes",
+  "start_url": "http://192.168.1.155/SisAndaimes/",
+  "display": "fullscreen",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/public/assets/images/icon.ico",
+      "sizes": "16x16",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/logopwa.png",
+      "sizes": "153x153",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/public/assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "scope": "/SisAndaimes/",
+  "orientation": "landscape",
+  "serviceworker": {
+    "src": "/SisAndaimes/public/service-worker.js",
+    "scope": "/SisAndaimes/"
+  },
+  "manifest_version": 2
+}

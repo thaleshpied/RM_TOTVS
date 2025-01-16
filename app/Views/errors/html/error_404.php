@@ -18,7 +18,7 @@
         body {
             height: 100%;
             background: #fafafa;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-fEmaily: "Helvetica Neue", Helvetica, Arial, sans-serif;
             color: #777;
             font-weight: 300;
         }

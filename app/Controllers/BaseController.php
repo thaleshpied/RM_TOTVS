@@ -33,7 +33,7 @@ abstract class BaseController extends Controller
      * class instantiation. These helpers will be available
      * to all other controllers that extend BaseController.
      *
-     * @var list<string>
+     * @var array
      */
     protected $helpers = [];
 
@@ -49,10 +49,10 @@ abstract class BaseController extends Controller
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
     {
         // Do Not Edit This Line
-        parent::initController($request, $response, $logger);
+       parent::initController($request, $response, $logger);
 
         // Preload any models, libraries, etc, here.
 
-        // E.g.: $this->session = service('session');
+        // E.g.: $this->session = \Config\Services::session();
     }
 }

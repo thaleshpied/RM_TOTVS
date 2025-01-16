@@ -21,7 +21,9 @@ class Cache extends BaseConfig
      * The name of the preferred handler that should be used. If for some reason
      * it is not available, the $backupHandler will be used in its place.
      */
-    public string $handler = 'file';
+    // public string $handler = 'file';
+    
+    public string $handler = 'dummy';
 
     /**
      * --------------------------------------------------------------------------
@@ -45,6 +47,25 @@ class Cache extends BaseConfig
      * @deprecated Use the driver-specific variant under $file
      */
     public string $storePath = WRITEPATH . 'cache/';
+
+    /**
+     * --------------------------------------------------------------------------
+     * Cache Include Query String
+     * --------------------------------------------------------------------------
+     *
+     * Whether to take the URL query string into consideration when generating
+     * output cache files. Valid options are:
+     *
+     *    false = Disabled
+     *    true  = Enabled, take all query parameters into account.
+     *            Please be aware that this may result in numerous cache
+     *            files generated for the same page over and over again.
+     *    ['q'] = Enabled, but only take into account the specified list
+     *            of query parameters.
+     *
+     * @var bool|string[]
+     */
+    public $cacheQueryString = false;
 
     /**
      * --------------------------------------------------------------------------
@@ -149,23 +170,4 @@ class Cache extends BaseConfig
         'redis'     => RedisHandler::class,
         'wincache'  => WincacheHandler::class,
     ];
-
-    /**
-     * --------------------------------------------------------------------------
-     * Web Page Caching: Cache Include Query String
-     * --------------------------------------------------------------------------
-     *
-     * Whether to take the URL query string into consideration when generating
-     * output cache files. Valid options are:
-     *
-     *    false = Disabled
-     *    true  = Enabled, take all query parameters into account.
-     *            Please be aware that this may result in numerous cache
-     *            files generated for the same page over and over again.
-     *    ['q'] = Enabled, but only take into account the specified list
-     *            of query parameters.
-     *
-     * @var bool|list<string>
-     */
-    public $cacheQueryString = false;
 }
