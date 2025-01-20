@@ -4,28 +4,8 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\Informacoes_gerenciais;
-use App\Models\Rotinas_tmov;
-use App\Models\Rotinas_tmovcompl;
-Use App\Models\Rotinas_tmovrelac;
 Use App\Models\Rotinas_usuarios;
-Use App\Models\Imagem;
-Use App\Models\Rotinas_samf;
-Use App\Models\Rotinas_titmmov;
-Use App\Models\Rotinas_titmmovcompl;
-Use App\Models\Rotinas_samf_grupotrabalho;
-Use App\Models\Rotinas_samf_funcionarios;
-Use App\Models\Rotinas_samf_areas;
-Use App\Models\Logs_samf;
-Use App\Models\Rotinas_clientes;
-Use App\Models\Informacoes_andaimes;
-use App\Config\Email;
-Use App\Models\Testeinfogerais;
-Use App\Models\Migracao;
 Use App\Models\Rotinas_fiscais;
-// ABAIXO PARA PLANILHA 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-use PhpOffice\PhpSpreadsheet\IOFactory;
 
 class Work extends BaseController
 {
@@ -128,7 +108,32 @@ class Work extends BaseController
         ]);
 	}
 
-	
+	// ATUALIZANDO INFORMAÇÕES DE MOVIMENTOS SENDO ALTERANDO DADOS DOS ITENS UTILIZADOS E OUTROS DADOS DO MOVIMENTO EM SI 
+	public function UpdatesMovimentos()
+	{
+		$IDMOV = $this->request->getGet('IDMOV');
+		
+		$USUARIO = 'CONVIDADO';
+		$action = __FUNCTION__;
+		$page_title = 'Rotinas Fiscais';
+		
+		$Informacoes_gerenciais = new Informacoes_gerenciais();
+		$Rotinas_fiscalModel = new Rotinas_fiscais();
+
+		
+		$getRegistroFiscalModel = $Informacoes_gerenciais->getRegistroFiscal($IDMOV);		
+		$CFOP = $Rotinas_fiscalModel->getCFOP();
+
+		
+		
+		return view('components/rotinas/updateFiscal', [
+			'action' => $action,
+			'page_title' => $page_title,
+			'IDMOV' => $IDMOV,
+			'data'=>$getRegistroFiscalModel,
+			'CFOP' => $CFOP
+		]);
+	}
 	
 
 	

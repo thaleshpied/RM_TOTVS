@@ -24,6 +24,14 @@
                 <span class="hide-menu">EFD Cont.</span>
               </a>
             </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="<?php echo site_url('UpdatesMovimentos'); ?>" aria-expanded="false">
+                <span>
+                  <i class="ti ti-article"></i>
+                </span>
+                <span class="hide-menu">Updates Movimento</span>
+              </a>
+            </li>
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">Relatórios</span>

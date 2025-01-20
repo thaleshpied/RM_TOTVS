@@ -1,12 +1,7 @@
-<?php echo $this->extend('layouts/defaultexterno') ?>
+<?php echo $this->extend('layouts/default') ?>
         
 <?php echo $this->section('content') ?>
 
-<!--**********************************
-	Content body start
-***********************************-->
-<div class="content-body">
-	<div class="container-fluid">
 
 		<!-- BREADCRUMB DA PÁGINA -->
 		<div class="row page-titles">

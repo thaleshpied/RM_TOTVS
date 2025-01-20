@@ -324,7 +324,7 @@ class DzConfig extends BaseConfig
 						'https://fonts.googleapis.com/icon?family=Material+Icons',
 						'public/assets/vendor/toastr/css/toastr.min.css',
 					],
-					'Work_updateFiscal' => [
+					'Work_UpdatesMovimentos' => [
 						'public/assets/vendor/bootstrap-daterangepicker/daterangepicker.css',
 						'public/assets/vendor/clockpicker/css/bootstrap-clockpicker.min.css',
 						'public/assets/vendor/jquery-asColorPicker/css/asColorPicker.min.css',
@@ -1052,7 +1052,7 @@ class DzConfig extends BaseConfig
 						'public/assets/vendor/datatables/js/jquery.dataTables.min.js',
 						'public/assets/js/plugins-init/datatables.init.js',	
 					],
-					'Work_updateFiscal' => [
+					'Work_UpdatesMovimentos' => [
 						'public/assets/vendor/chart.js/Chart.bundle.min.js',
 						'public/assets/vendor/apexchart/apexchart.js',
 						'public/assets/vendor/moment/moment.min.js',
