@@ -124,119 +124,16 @@
             <i class="ti ti-x fs-8"></i>
           </div>
         </div>
-        <!-- Sidebar navigation-->
-        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
-          <ul id="sidebarnav">
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">Início</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./index.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-layout-dashboard"></i>
-                </span>
-                <span class="hide-menu">Dashboard</span>
-              </a>
-            </li>
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">ROTINAS</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-article"></i>
-                </span>
-                <span class="hide-menu">EFD Cont.</span>
-              </a>
-            </li>
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">Relatórios</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-login"></i>
-                </span>
-                <span class="hide-menu">EFD Cont</span>
-              </a>
-            </li>
-            <!-- <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-alerts.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-alert-circle"></i>
-                </span>
-                <span class="hide-menu">Alerts</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-card.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-cards"></i>
-                </span>
-                <span class="hide-menu">Card</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-forms.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-file-description"></i>
-                </span>
-                <span class="hide-menu">Forms</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-typography.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-typography"></i>
-                </span>
-                <span class="hide-menu">Typography</span>
-              </a>
-            </li>
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">AUTH</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-login"></i>
-                </span>
-                <span class="hide-menu">Login</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-user-plus"></i>
-                </span>
-                <span class="hide-menu">Register</span>
-              </a>
-            </li>
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">EXTRA</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./icon-tabler.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-mood-happy"></i>
-                </span>
-                <span class="hide-menu">Icons</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./sample-page.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-aperture"></i>
-                </span>
-                <span class="hide-menu">Sample Page</span>
-              </a>
-            </li> -->
-          </ul>
-        </nav>
+                
+
+
+        <!-- INCLUINDO SIDEBAR -->
+        <?php echo $this->include('elements/sidebar') ?>
+
+
+
+
+
         <!-- End Sidebar navigation -->
       </div>
       <!-- End Sidebar scroll-->
@@ -289,6 +186,7 @@
             </ul>
           </div>
         </nav>
+        
       </header>
       <!--  Header End -->
       <div class="container-fluid">
@@ -296,21 +194,11 @@
         
         
         
+      <?php echo $this->renderSection('content') ?>
 
-        <div class="py-6 px-6 text-center">
-          <p class="mb-0 fs-4">Rodapé<a href="" target="_blank" class="pe-1 text-primary text-decoration-underline"></a>  <a href=""></a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="<?php echo base_url('assets2/libs/jquery/dist/jquery.min.js'); ?>"></script>
-  <script src="<?php echo base_url('assets2/libs/bootstrap/dist/js/bootstrap.bundle.min.js'); ?>"></script>
-  <script src="<?php echo base_url('assets2/js/sidebarmenu.js'); ?>"></script>
-  <script src="<?php echo base_url('assets2/js/app.min.js'); ?>"></script>
-  <script src="<?php echo base_url('assets2/libs/apexcharts/dist/apexcharts.min.js'); ?>"></script>
-  <script src="<?php echo base_url('assets2/libs/simplebar/dist/simplebar.js'); ?>"></script>
-  <script src="<?php echo base_url('assets2/js/dashboard.js'); ?>"></script>
-
+      <!-- INCLUINDO FOOTER  -->
+      <?php echo $this->include('elements/footer') ?>
+      
 
 
 
