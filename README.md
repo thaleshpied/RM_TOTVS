@@ -1,67 +1,82 @@
-# CodeIgniter 4 Application Starter
+# Aplicação Web em CodeIgniter 4 com SQL Server
 
-## What is CodeIgniter?
+Este repositório contém uma aplicação web desenvolvida com o framework **CodeIgniter 4**, utilizando **SQL Server** como banco de dados. 
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+A aplicação contém recursos para usuários do ERP TOTVS RM com o foco em Gestão de Estoque e Fiscal.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+---
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## 🚀 Tecnologias Utilizadas
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+- PHP 8.x
+- CodeIgniter 4
+- SQL Server
+- Bootstrap 5
+- Javascript
+- Datatable JS
+- **XAMPP** (recomendado para ambiente local)
 
-## Installation & updates
+---
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+## ✅ Requisitos
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+- XAMPP instalado (com PHP 8.x)
+- Composer instalado
+- Driver `php_sqlsrv.dll` (disponível neste repositório)
 
-## Setup
+---
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+## 🧩 Como configurar o ambiente local
 
-## Important Change with index.php
+Siga os passos abaixo para rodar a aplicação em ambiente local com suporte ao SQL Server.
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+### ✅ Passo 1 – Instalar o XAMPP com PHP 8.x
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+Baixe e instale o **XAMPP** com uma versão do PHP compatível com o driver SQL Server (recomenda-se PHP 8.x).
 
-**Please** read the user guide for a better explanation of how CI4 works!
+🔗 [https://www.apachefriends.org/pt_br/index.html](https://www.apachefriends.org/pt_br/index.html)
 
-## Repository Management
+---
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+### ✅ Passo 2 – Clonar o repositório
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+Clone o repositório para a pasta htdocs do XAMPP 
 
-## Server Requirements
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+### ✅ Passo 3 – Copiar o driver SQL Server
+O driver necessário (php_sqlsrv.dll) está localizado em: app/Libraries/DRIVESQL/php_sqlsrv.dll
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+Copie esse arquivo para a pasta de extensões do PHP no XAMPP: C:\xampp\php\ext
 
-> **Warning**
-> The end of life date for PHP 7.4 was November 28, 2022. If you are
-> still using PHP 7.4, you should upgrade immediately. The end of life date
-> for PHP 8.0 will be November 26, 2023.
+Depois disso, edite o arquivo: C:\xampp\php\php.ini E adicione a seguinte linha no final (ou próximo das outras extensions): extension=php_sqlsrv.dll
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+### ✅ Passo 4 – Configurar os dados de acesso ao banco
+Copie o arquivo de exemplo: cp env .env
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+Edite com as credenciais do seu SQL Server:
+
+database.default.hostname = localhost
+database.default.database = nome_da_sua_base
+database.default.username = seu_usuario
+database.default.password = sua_senha
+database.default.DBDriver = SQLSRV
+
+Ou configurando o arquivo app/Config/Database.php
+
+### ✅ Passo 5 – Iniciar o Apache pelo XAMPP
+Acesse o projeto via navegador: http://localhost/seu-projeto/public
+
+📂 Estrutura do Projeto
+├── app/
+│   ├── Config/
+│   ├── Controllers/
+│   ├── Libraries/
+│   │   └── DRIVESQL/         ← Driver SQL Server (php_sqlsrv.dll)
+│   └── ...
+├── public/
+├── writable/
+├── vendor/
+├── instalador.bat            ← Script de instalação do driver
+└── README.md
+
+
