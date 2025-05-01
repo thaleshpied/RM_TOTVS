@@ -36,7 +36,14 @@
     <!-- DESATIVADO POR DESEMPENHO -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.22/jspdf.plugin.autotable.min.js"></script>
 
+   <!-- DataTables CSS -->
+   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
 
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
 
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.0/css/jquery.dataTables.min.css">
 
@@ -55,14 +62,14 @@
 
     <!-- SERVICE PARA MANIFESTO -->
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#317EFB"/>       
+    <meta name="theme-color" content="#1a39d6"/>       
     
 
 	<!-- PAGE TITLE HERE -->
 	<title>FISCAL</title>
 
     <!-- MOBILE SPECIFIC -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=500, shrink-to-fit=no">
 
     <!-- FONT AWESOME #DESEMPENHO -->
     <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
@@ -159,15 +166,15 @@
           </ul>
           <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-              <a href="#" target="_blank" class="btn btn-primary">Opção</a>
+              <!-- <a href="#" target="_blank" class="btn btn-primary">Opção</a> -->
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                   aria-expanded="false">
-                  <img src="<?php echo base_url('assets2/images/profile/user-1.jpg'); ?>" alt="" width="35" height="35" class="rounded-circle">
+                  <img src="<?php echo base_url('public/assets/images/avatar/4.png'); ?>" alt="" width="35" height="35" class="rounded-circle">
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div class="message-body">
-                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                    <!-- <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>
                     </a>
@@ -178,8 +185,8 @@
                     <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-list-check fs-6"></i>
                       <p class="mb-0 fs-3">My Task</p>
-                    </a>
-                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                    </a> -->
+                    <a onclick="logout()" class="btn btn-outline-primary mx-3 mt-2 d-block">Sair</a>
                   </div>
                 </div>
               </li>
@@ -189,7 +196,8 @@
         
       </header>
       <!--  Header End -->
-      <div class="container-fluid">
+        <!-- ABAIXO A CLASSE ERA container-fluid -->
+      <div class="S">
         <!--  Row 1 -->
         
         
@@ -231,6 +239,33 @@
 		<script src="<?php echo base_url($js); ?>"></script>
 	<?php } ?>
 	<?php echo $this->renderSection('scripts') ?>
+
+  <!-- SCRIPT PARA LOGOUT -->
+  <script>
+        function logout() {
+            // Envia uma solicitação POST para a rota de logout
+            fetch('<?php echo base_url('logout'); ?>', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({}) // Seu corpo de solicitação, se necessário
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Redireciona para a página inicial ou outra página desejada
+                    window.location.href = '<?php echo base_url('index'); ?>';
+                } else {
+                    console.error('Erro ao fazer logout:', response.statusText);
+                    // Lida com o erro, se necessário
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao fazer logout:', error);
+                // Lida com o erro, se necessário
+            });
+        }
+    </script>
 
 
     <!--**********************************

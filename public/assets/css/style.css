@@ -21645,10 +21645,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
           .page-titles .breadcrumb li a {
             font-size: 0.75rem; } }
       .page-titles .breadcrumb li.active {
-        color: var(--primary);
+        color: #000;
         font-weight: 600; }
         .page-titles .breadcrumb li.active a {
-          color: #FF5E4B; }
+          color: #000; }
     .page-titles .breadcrumb .breadcrumb-item + .breadcrumb-item:before {
       /* font-family: 'simple-line-icons';
                 font-weight: 400;
@@ -29042,7 +29042,7 @@ height: 10px; /* Largura da barra de rolagem */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #f4821e; /* Cor do indicador da barra de rolagem */
+  background-color: #1a39d6; /* Cor do indicador da barra de rolagem */
   border-radius: 2px; /* Raio das bordas do indicador */
 }
 
@@ -29191,7 +29191,7 @@ cardpl{
 }
 
 table.dataTable thead th {
-    background-color: #f28836; /* Cor de fundo do cabeçalho */
+    background-color: #6c757d; /* Cor de fundo do cabeçalho */
     color: white; /* Cor do texto do cabeçalho */
     font-weight: bold;
 }

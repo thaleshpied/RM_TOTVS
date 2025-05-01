@@ -5,45 +5,51 @@
               <span class="hide-menu">Início</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./index.html" aria-expanded="false">
+              <a class="sidebar-link" href="index" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
-                <span class="hide-menu">Dashboard</span>
+                <span class="hide-menu">Início</span>
+              </a>
+              <a class="sidebar-link" href="<?php echo site_url('RecebimentoNFe'); ?>" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                <span href="javascript:void()" class="hide-menu">Recebimento NF-e</span>
               </a>
             </li>
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">ROTINAS</span>
             </li>
-            <li class="sidebar-item">
+            <!-- <li class="sidebar-item">
               <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
                 <span class="hide-menu">EFD Cont.</span>
               </a>
-            </li>
+            </li> -->
             <li class="sidebar-item">
-              <a class="sidebar-link" href="<?php echo site_url('UpdatesMovimentos'); ?>" aria-expanded="false">
+              <a class="sidebar-link" type="button" aria-expanded="false" data-bs-toggle="modal" data-bs-target="#modalidmov">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
-                <span class="hide-menu">Updates Movimento</span>
+                <span class="hide-menu">Update Movimento</span>
               </a>
             </li>
-            <li class="nav-small-cap">
+            <!-- <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">Relatórios</span>
-            </li>
-            <li class="sidebar-item">
+            </li> -->
+            <!-- <li class="sidebar-item">
               <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
                 <span>
                   <i class="ti ti-login"></i>
                 </span>
                 <span class="hide-menu">EFD Cont</span>
               </a>
-            </li>
+            </li> -->
             <!-- <li class="sidebar-item">
               <a class="sidebar-link" href="./ui-alerts.html" aria-expanded="false">
                 <span>
@@ -117,4 +123,10 @@
               </a>
             </li> -->
           </ul>
+          <!-- <div class="">
+            <div class="text-center">
+                <h4 class="fs-18 font-w600 mb-4"></h4>
+                <a href="<?php echo site_url('/logsgeral'); ?>" class="btn btn-primary btn-rounded">LOGS </a>
+            </div>
+          </div> -->
         </nav>

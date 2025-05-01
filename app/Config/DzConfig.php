@@ -59,6 +59,10 @@ class DzConfig extends BaseConfig
 						'public/assets/vendor/owl-carousel/owl.carousel.css',
 						'public/assets/vendor/nouislider/nouislider.min.css',
 					],
+					'Work_RecebimentoNFe_controller' => [
+						'public/assets/vendor/owl-carousel/owl.carousel.css',
+						'public/assets/vendor/nouislider/nouislider.min.css',
+					],
 					'Work_index_2' => [
 						'public/assets/vendor/owl-carousel/owl.carousel.css',
 						'public/assets/vendor/nouislider/nouislider.min.css',
@@ -489,6 +493,15 @@ class DzConfig extends BaseConfig
 				],
 				'js' => [
 					'Work_index' => [
+						'public/assets/vendor/chart.js/Chart.bundle.min.js',
+						'public/assets/vendor/apexchart/apexchart.js',
+						'public/assets/vendor/peity/jquery.peity.min.js',
+						'public/assets/js/dashboard/dashboard-1.js',
+						'public/assets/vendor/owl-carousel/owl.carousel.js',
+						'public/assets/vendor/datatables/js/jquery.dataTables.min.js',
+						'public/assets/js/plugins-init/datatables.init.js',	
+					],
+					'Work_RecebimentoNFe_controller' => [
 						'public/assets/vendor/chart.js/Chart.bundle.min.js',
 						'public/assets/vendor/apexchart/apexchart.js',
 						'public/assets/vendor/peity/jquery.peity.min.js',
