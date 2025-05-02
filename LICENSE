@@ -1,21 +1,16 @@
-MIT License
+Licença de Uso Restrito
 
-Copyright (c) 2025 Thales Henrique
+Este software foi desenvolvido exclusivamente para fins educacionais e de demonstração de aprendizado. 
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Direitos Autorais © Thales Henrique Campos Piedade 2025
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Todos os direitos estão reservados. É expressamente proibido:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+- Copiar, redistribuir ou republicar este software total ou parcialmente;
+- Modificar ou adaptar o código para qualquer finalidade;
+- Utilizar este software em ambientes de produção ou comerciais;
+- Vender, alugar ou sublicenciar este software ou qualquer parte dele.
+
+O uso deste software é permitido **apenas para fins de análise acadêmica ou demonstração técnica**, sem qualquer garantia de funcionamento, estabilidade ou segurança.
+
+Ao acessar ou visualizar este código, você concorda em respeitar estes termos. Qualquer uso não autorizado poderá resultar em responsabilização civil e penal conforme as leis aplicáveis.
